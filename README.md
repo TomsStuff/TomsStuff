@@ -4,3 +4,4 @@ I'm a LUA/LUAU Programmer that experiments with roblox, If for whatever reason y
 
 ## Ask for permission before taking my code please! 
 
+If i find that you took my code without my permission i'll ask that you take it down.
