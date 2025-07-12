@@ -41,8 +41,8 @@ if _G.data['SaveDecompileLogs'] then
 	for i,v in pairs(_G.data['PathToDump']) do
 		save_logs(v)
 	end
-	if game.Players.LocalPlayer.Character then
-	save_logs(game.Players.LocalPlayer.Character)
+	if game:GetService("Players").LocalPlayer.Character then
+	save_logs(game:GetService("Players").LocalPlayer.Character)
 	end
 	print('✅ - LocalScripts have been dumped! | time taken: ' .. tick() - cur_time .. ' seconds')
 end
@@ -2164,7 +2164,7 @@ end, function()
 		end
 		cnt = 0
 	else
-		for _,v in ipairs(game.Players.LocalPlayer:GetDescendants()) do
+		for _,v in ipairs(game:GetService("Players").LocalPlayer:GetDescendants()) do
             if v:IsA('LocalScript') then
                 local script = decompile(v)
                 
@@ -2174,8 +2174,8 @@ end, function()
                 end
             end
         end
-        if game.Players.LocalPlayer.Character then
-        for _,v in ipairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+        if game:GetService("Players").LocalPlayer.Character then
+        for _,v in ipairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
             if v:IsA('LocalScript') then
                 local script = decompile(v)
                 
